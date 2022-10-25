@@ -6,7 +6,7 @@ COPY . .
 
 RUN npm install
 RUN npm ci --only=production
-RUN npm run ruild
+RUN npm run build
 
 FROM nginx:latest
 WORKDIR /usr/share/nginx/html
