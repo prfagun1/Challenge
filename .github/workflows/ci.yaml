@@ -38,4 +38,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-
+      - name: build and publish
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: prfagun1/challenge:v1
